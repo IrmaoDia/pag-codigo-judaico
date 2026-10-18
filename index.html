@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#23454d">
+    <title>Richesse et stabilité — 5 principes juifs</title>
+    <style>
+      * { box-sizing: border-box; }
+      html { background: #23454d; }
+      body { margin: 0; color: #fff; font-family: Arial, Helvetica, sans-serif; }
+      main { width: min(100% - 36px, 820px); margin: 0 auto; padding: 48px 0 40px; text-align: center; }
+      h1 { margin: 0 auto 26px; max-width: 600px; font-family: Arial, Helvetica, sans-serif; font-size: clamp(19px, 4.6vw, 29px); font-weight: 700; line-height: 1.18; letter-spacing: -.035em; }
+      h1 .headline-top { display: block; }
+      h1 em { font-style: italic; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      h1 .headline-gold { display: block; margin-top: 3px; color: #e8b648; font-weight: 900; }
+      .video { width: 100%; max-width: 400px; margin: 0 auto; }
+      .notice { margin: 23px 0 0; font-size: clamp(14px, 3.5vw, 17px); font-weight: 400; line-height: 1.5; }
+      .notice time { font-weight: 700; white-space: nowrap; }
+      @media (max-width: 480px) { main { padding-top: 30px; } h1 { margin-bottom: 23px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><span class="headline-top"><em>RICHESSE ET STABILITÉ</em> GRÂCE À</span><strong class="headline-gold">CES 5 PRINCIPES JUIFS</strong></h1>
+      <div class="video">
+        <vturb-smartplayer id="vid-6ad40241c2b513935f99b84b" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+          <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div>
+        </vturb-smartplayer>
+      </div>
+      <p class="notice">Cette vidéo sera retirée le <time id="removal-date"></time>.</p>
+    </main>
+    <script>
+      function updateRemovalDate() {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const date = document.getElementById('removal-date');
+        date.textContent = new Intl.DateTimeFormat('fr-FR', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        }).format(tomorrow);
+        date.dateTime = `${tomorrow.getFullYear()}-${String(tomorrow.getMonth() + 1).padStart(2, '0')}-${String(tomorrow.getDate()).padStart(2, '0')}`;
+      }
+      updateRemovalDate();
+      setInterval(updateRemovalDate, 1000);
+      document.addEventListener('visibilitychange', updateRemovalDate);
+      var s = document.createElement('script');
+      s.src = 'https://scripts.converteai.net/b4d92c20-2920-493b-982b-7f8dd3923ccb/players/6ad40241c2b513935f99b84b/v4/player.js';
+      s.async = true;
+      document.head.appendChild(s);
+    </script>
+  </body>
+</html>
